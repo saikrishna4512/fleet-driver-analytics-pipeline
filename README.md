@@ -183,6 +183,9 @@ Fields:
 **Sai Krishna Reddy**  
 Aspiring Data Engineer | Cloud & Analytics Enthusiast  
 
+📌 LinkedIn: https://www.linkedin.com/in/sai-krishna-reddy-k-14008b27a/  
+📧 Email: saikrishnareddy478@example.com  
+
 ---
 
 ## ⭐ Support
