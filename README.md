@@ -160,7 +160,6 @@ data/sample_vehicle_data.csv
 - Identifies high-risk drivers based on behaviour patterns  
 - Improves fleet safety monitoring  
 - Enables data-driven decision-making  
-- Provides actionable insights for fleet managers  
 
 ---
 
