@@ -1,78 +1,65 @@
 # 🚗 Fleet Driver Behaviour Analytics Pipeline
 
 ## 📌 Project Overview
-This project analyzes fleet vehicle GPS data to evaluate **driver behaviour, safety, and risk levels** using modern data engineering tools.
+This project analyzes fleet vehicle GPS data to evaluate **driver behaviour, safety, and risk levels** using modern data engineering and analytics tools.
 
-It demonstrates an end-to-end pipeline using:
+It demonstrates an end-to-end pipeline from raw data ingestion to business insights using:
 
 - Azure Databricks (PySpark)
 - Delta Lake (Medallion Architecture)
-- Power BI (Dashboard)
+- Power BI (Interactive Dashboard)
 - Notion (Project Planning)
-- draw.io (Architecture Design)
 
 ---
 
 ## 🧱 Architecture
 
-The solution follows a **Medallion Architecture (Bronze → Silver → Gold)**.
+The solution follows a Medallion Architecture:
 
-📊 Architecture Diagram:
-```
-docs/architecture.png
-```
+- Bronze → Raw GPS data ingestion  
+- Silver → Cleaned & enriched driver behaviour data  
+- Gold → Business-ready KPIs and risk scoring  
 
-🧩 Editable Diagram:
-```
-docs/architecture.drawio
-```
+![Architecture](docs/architecture.png)
 
 ---
 
 ## 🗂 Project Planning (Notion)
 
-Project planning and execution tracking was managed using **Notion**, including:
+Project execution was managed using Notion:
 
-- Epics & Tasks breakdown
-- Daily progress tracking
-- Data pipeline milestones
-- Dashboard development stages
-
-📌 Notion Structure:
-- Epic 1: Data Ingestion (Bronze)
-- Epic 2: Data Cleaning (Silver)
-- Epic 3: Aggregation (Gold)
-- Epic 4: Power BI Dashboard
-- Epic 5: Documentation & GitHub
-
-> *(Optional: Add your Notion link here if public)*
+- Epics & task breakdown  
+- Daily progress tracking  
+- Pipeline development stages  
+- Dashboard development  
 
 ---
 
 ## 🔄 Data Pipeline
 
 ### 🟤 Bronze Layer
-- Raw GPS data ingestion
-- Metadata columns added:
+- Ingest raw GPS data (CSV / streaming)
+- Add metadata columns:
   - `_ingest_ts`
   - `_source_file`
 
 ---
 
 ### ⚪ Silver Layer
-- Data cleaning & transformation
+- Data cleaning & validation
 - Remove duplicates
+- Handle null values
 - Feature engineering:
   - Overspeed events
   - Harsh braking events
   - Harsh acceleration events
-  - Idle time
+  - Idle time calculation
 
 ---
 
 ### 🟡 Gold Layer
 - Driver-level aggregation
-- Metrics:
+- Metrics generated:
   - Average safety score
   - Risk classification:
     - Low
@@ -81,15 +68,23 @@ Project planning and execution tracking was managed using **Notion**, including:
 
 ---
 
-## 📊 Power BI Dashboard
+## 📊 Dashboard Preview
 
-The dashboard provides:
+### Fleet Overview
+![Fleet Overview](docs/dashboard_overview.png)
 
-- 🚦 Driver Risk Distribution
-- 📈 Average Driver Safety Score
-- 🚗 Driver Performance Summary
-- ⚠️ Top Overspeeding Drivers
-- 🛑 Harsh Braking Analysis
+### Behaviour Analysis
+![Behaviour Analysis](docs/dashboard_behaviour.png)
+
+---
+
+## 📊 Power BI Dashboard Features
+
+- 🚦 Driver Risk Distribution  
+- 📈 Average Driver Safety Score (KPI)  
+- 🚗 Driver Performance Summary  
+- ⚠️ Top Overspeeding Drivers  
+- 🛑 Harsh Braking Analysis  
 
 Dashboard file:
 ```
@@ -113,7 +108,8 @@ fleet-driver-analytics-pipeline/
 │
 ├── docs/
 │   ├── architecture.png
-│   ├── architecture.drawio
+│   ├── dashboard_overview.png
+│   ├── dashboard_behaviour.png
 │   └── data_description.md
 │
 ├── dashboard/
@@ -127,43 +123,44 @@ fleet-driver-analytics-pipeline/
 ## 📊 Dataset
 
 Sample dataset included:
+
 ```
 data/sample_vehicle_data.csv
 ```
 
-Fields:
-- VehicleId
-- VehicleNo
-- Latitude
-- Longitude
-- Location
-- Datetime
-- Speed
-- Ignition
-- Direction
-- GPSstatus
+### Fields:
+- VehicleId  
+- VehicleNo  
+- Latitude  
+- Longitude  
+- Location  
+- Datetime  
+- Speed  
+- Ignition  
+- Direction  
+- GPSstatus  
 
-> ⚠️ Full dataset (~500K+ records) not included due to privacy & size.
+> ⚠️ Full dataset (~500K+ records) not included due to size and privacy constraints.
 
 ---
 
 ## 🚀 How to Run
 
-1. Upload data to Azure Data Lake / Databricks Volume  
-2. Run notebooks:
+1. Upload sample data to Azure Data Lake / Databricks Volume  
+2. Run notebooks in order:
    - Bronze → Silver → Gold  
 3. Validate Gold tables  
 4. Connect Power BI to Databricks  
-5. Open dashboard  
+5. Open `.pbix` dashboard  
 
 ---
 
-## 🧠 Key Insights
+## 🧠 Business Impact
 
-- Identifies risky driving behaviour
-- Calculates driver safety score
-- Enables fleet monitoring & optimization
-- Provides business-ready analytics dashboard
+- Identifies high-risk drivers based on behaviour patterns  
+- Improves fleet safety monitoring  
+- Enables data-driven decision-making  
+- Provides actionable insights for fleet managers  
 
 ---
 
@@ -174,7 +171,6 @@ Fields:
 - Delta Lake  
 - Power BI  
 - Notion  
-- draw.io  
 
 ---
 
@@ -184,7 +180,8 @@ Fields:
 Aspiring Data Engineer | Cloud & Analytics Enthusiast  
 
 📌 LinkedIn: https://www.linkedin.com/in/sai-krishna-reddy-k-14008b27a/  
-📧 Email: saikrishnareddy478@example.com  
+📧 Email: saikrishnareddy478@gmail.com  
+💼 Open to Data Engineer roles in Canada  
 
 ---
 
