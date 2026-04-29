@@ -174,6 +174,12 @@ data/sample_vehicle_data.csv
 
 ---
 
+## 🚀 Future Improvements
+
+- Real-time streaming ingestion
+- Driver alert system
+- ML-based risk prediction
+
 ## 👤 Author
 
 **Sai Krishna Reddy**  
