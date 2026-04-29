@@ -170,7 +170,7 @@ data/sample_vehicle_data.csv
 - PySpark  
 - Delta Lake  
 - Power BI  
-- Notion  
+
 
 ---
 
@@ -183,7 +183,7 @@ data/sample_vehicle_data.csv
 ## 👤 Author
 
 **Sai Krishna Reddy**  
-Aspiring Data Engineer | Cloud & Analytics Enthusiast  
+Open to roles Data Engineer | Cloud & Analytics Enthusiast  
 
 📌 LinkedIn: https://www.linkedin.com/in/sai-krishna-reddy-k-14008b27a/  
 📧 Email: saikrishnareddy478@gmail.com  
